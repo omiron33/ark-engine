@@ -1,0 +1,39 @@
+{
+  "name": "ark-engine",
+  "version": "0.1.0",
+  "description": "Deterministic Canvas lyric-video rendering with section caching and a local editor",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "ark-engine": "engine/cli.mjs"
+  },
+  "exports": {
+    ".": "./engine/index.mjs",
+    "./visual": "./engine/visual.mjs",
+    "./project": "./engine/project.mjs",
+    "./cache": "./engine/cache.mjs",
+    "./export": "./engine/export.mjs",
+    "./import": "./engine/import.mjs",
+    "./server": "./engine/server.mjs"
+  },
+  "files": [
+    "engine/",
+    "examples/basic/project.json",
+    "examples/basic/make-audio.mjs",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "example:audio": "node examples/basic/make-audio.mjs",
+    "example:validate": "node engine/cli.mjs validate --project examples/basic/project.json",
+    "example:render": "node engine/cli.mjs render --project examples/basic/project.json --out examples/basic/out/demo.mp4",
+    "example:serve": "node engine/cli.mjs serve --project examples/basic/project.json"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "1.0.9"
+  }
+}

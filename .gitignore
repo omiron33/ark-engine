@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.tgz
+*.log
+.env
+.env.*
+!.env.example
+out/
+.render-cache/
+.revisions/
+examples/basic/tone.wav

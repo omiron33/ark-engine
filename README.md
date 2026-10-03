@@ -4,6 +4,12 @@ Ark Engine renders timed words and procedural graphics into lyric videos. A JSON
 
 This package contains the reusable rendering core: audio import, project validation and inspection, section editing, deterministic scene evaluation, cached H.264/AAC export, and a local browser editor. It does not include speech alignment, media generation providers, automatic creative direction, external publishing, or project-specific films.
 
+## Relation to Ark Video Studio
+
+Ark Engine is the standalone, reusable rendering core of [Ark Video Studio](https://github.com/omiron33/ark-video-studio), the full agent-directed lyric film studio. Its modules (`project`, `import`, `cache`, `export`, `server`, `visual` and the camera, semantic, sculptural and story choreography catalogs) are released versions of the matching files in the studio's `engine/` folder, packaged with tests and a synthetic example so they install and run on their own. The studio keeps what this package leaves out: transcription and word alignment, creative direction, review gates, image generation providers, the project films, and the GPU photoreal scene renderer used for the song films such as [The Faith of the Apostles](https://github.com/omiron33/faith-of-the-apostles).
+
+Made for the TechnoChristianity lyric films: [technochristianity.com/music](https://technochristianity.com/music) · [TechnoChristianity on YouTube](https://www.youtube.com/@technochristianity)
+
 ## Requirements
 
 - Node.js 22 or newer.
